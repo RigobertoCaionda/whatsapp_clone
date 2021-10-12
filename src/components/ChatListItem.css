@@ -1,0 +1,57 @@
+.chatListItem {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	height: 70px;
+}
+.chatListItem:hover {
+	background-color: #f5f5f5;
+}
+.chatListItem.active {
+	background-color: #ebebeb;
+}
+.chatListItem--avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	margin-left: 15px;
+}
+.chatListItem--lines {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: 1px solid #eee;
+	padding-right: 15px;
+	margin-left: 15px;
+
+	flex-wrap: wrap;/*Essa e a linha de baixo sao as gambiarras para ficar os 3 pontinhos e devem ser colocados na div pai onde estao os 3 pontinhos. Se vc nao quiser colocar esse codigo e o de baixo deves colocar um width aqui, mas essa e a forma mais eficiente*/
+	min-width: 0;
+}
+.chatListItem--line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.chatListItem--name {
+	font-size: 17px;
+	color: #000;
+}
+.chatListItem--date {
+	font-size: 12px;
+	color: #999;
+}
+.chatListItem--lastMsg {
+	font-size: 14px;
+	color: #999;
+	display: flex;
+	width: 100%;
+}
+.chatListItem--lastMsg p {
+	overflow: hidden;/*Deve ter o overflow-hidden para funcionar*/
+	white-space: nowrap;/*Para nao ir para a linha de baixo, vai ficar tudo numa so linha*/
+	text-overflow: ellipsis;/*Faz com que quando atingir o overflow coloque 3 pontinhos*/
+	margin: 0;
+}

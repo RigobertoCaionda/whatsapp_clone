@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #D2DBDC;
+	margin: 0;
+	font-family: 'Segoe UI', Helvetica Neue, Helvetica, Lucida Grande, Arial;
+}
+.app-window {
+	display: flex;
+	height: 100vh;
+	background-color: #EDEDED;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+	width: 35%;
+	max-width: 415px;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+}
+.header--avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.header--buttons {
+	display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header--btn {
+	width: 40px;
+	height: 40p;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.search {
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #eee;
+	padding: 5px 15px;
+}
+.search--input {
+	background-color: #fff;
+	height: 40px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+}
+.search--input input{
+	flex: 1;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	margin-left: 10px;
+}
+.chatlist {
+	flex: 1;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.chatlist::-webkit-scrollbar {/*Isso funciona no Chrome e serve para colocar tamanho da barra de rolagem, mas so isso nao funciona, precisa de colocar a cor dessa barra de rolagem para se ver*/
+	width: 6px;
+	height: 6px;
+}
+.chatlist::-webkit-scrollbar-thumb {/*Cor da barra de rolagem.*/
+	background-color: rgba(0,0,0,.2);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contentarea {
+	flex: 1;
 }
